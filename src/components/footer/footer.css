@@ -1,0 +1,7 @@
+/* Footer */
+.main-footer {
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+/* Kitchen / Cards - including general card styles for now since they are used mainly here */
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid var(--primary-red);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-navy);
+}
