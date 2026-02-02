@@ -17,3 +17,10 @@
     margin-bottom: 10px;
     color: var(--primary-navy);
 }
+/* Section Logo */
+.section-logo {
+    display: block;
+    max-width: 300px;
+    margin: 10px auto 30px;
+    height: auto;
+}
