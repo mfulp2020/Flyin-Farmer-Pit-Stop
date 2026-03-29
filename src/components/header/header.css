@@ -1,0 +1,148 @@
+/* Header */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    height: 80px;
+    /* Fixed smaller height */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Push nav to right since logo is absolute left */
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* Context for absolute logo */
+}
+
+.logo {
+    position: absolute;
+    top: -50px;
+    /* Vertically center the large logo (80px header - 180px logo / 2) */
+    left: -80px;
+    /* Move left "quite a bit" */
+    z-index: 1001;
+    /* Above header */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo img {
+    height: 180px;
+    /* Significantly bigger and overlapping */
+    transform: skew(-10deg);
+    transform-origin: top left;
+    display: block;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-navy);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-red);
+}
+
+.main-nav .btn-primary {
+    color: var(--white);
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    padding: 8px 20px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        visibility: hidden;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .main-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* Add JS toggle later */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo img {
+        height: 140px;
+        transform: none;
+    }
+}

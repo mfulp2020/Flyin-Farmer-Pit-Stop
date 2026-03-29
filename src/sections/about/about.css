@@ -1,0 +1,31 @@
+/* About Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-navy);
+}
+
+.about-card .card {
+    border-bottom: 4px solid var(--primary-navy);
+    /* Navy accent for this card */
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

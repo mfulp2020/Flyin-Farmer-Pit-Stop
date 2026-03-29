@@ -1,0 +1,143 @@
+:root {
+    /* Color Palette - Light Theme */
+    --primary-red: #ce0e2d;
+    /* Rapid Robert's Red / Flyin Farmer Red */
+    --primary-navy: #0a192f;
+    /* Deep Navy */
+    --accent-grey: #f4f4f4;
+    /* Light Grey Backgrounds */
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --white: #ffffff;
+
+    /* Typography */
+    --font-heading: 'Racing Sans One', cursive;
+    /* The "Cool" Font */
+    --font-subheading: 'Teko', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --container-width: 1200px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-style: italic;
+    /* Enhances speed look */
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--primary-navy);
+}
+
+p {
+    font-family: var(--font-body);
+}
+
+/* Layout Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section {
+    padding: var(--spacing-lg) 0;
+}
+
+.padding-large {
+    padding: 6rem 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: 2px solid var(--primary-red);
+}
+
+.btn-primary:hover {
+    background-color: #a50b24;
+    /* Darker Red */
+    border-color: #a50b24;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-navy);
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.8rem;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-red {
+    color: var(--primary-red);
+}
+
+.bg-light {
+    background-color: var(--accent-grey);
+}
+
+/* Grids */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}

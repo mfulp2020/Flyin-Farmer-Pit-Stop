@@ -1,0 +1,59 @@
+/* Contact Section */
+#contact {
+    background-color: var(--primary-navy);
+    color: var(--white);
+}
+
+#contact .section-title {
+    color: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-item i {
+    margin-bottom: 10px;
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.info-item p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
